@@ -9,7 +9,11 @@ export async function sendEmail(nombre, empresa, email, telefono, mensaje) {
     };
 
     try {
+<<<<<<< HEAD
         const response = await axios.post('https://api.abstractapi.com/v1/email/send', emailData, {
+=======
+        const response = await axios.post(process.env.REACT_URL_SERVICE_MAIL, emailData, {
+>>>>>>> 22f805c (primera version del servio del mail)
             headers: {
                 'api-key': process.env.REACT_APP_ABSTRACT_API_KEY
             }
@@ -21,10 +25,14 @@ export async function sendEmail(nombre, empresa, email, telefono, mensaje) {
             return 'error';
         }
     } catch (error) {
+<<<<<<< HEAD
         if (error.response) {
             console.error('Error al enviar el correo electrónico', error.response.data);
         } else {
             console.error('Error al enviar el correo electrónico', error);
         }
+=======
+        console.error('Error al enviar el correo electrónico', error);
+>>>>>>> 22f805c (primera version del servio del mail)
     }
 }
