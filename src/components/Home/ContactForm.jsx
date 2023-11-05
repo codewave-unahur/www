@@ -3,7 +3,6 @@ import { Box, TextField, Typography } from "@mui/material";
 import { Grid } from "@mui/material";
 import { Button } from "@mui/material";
 import { useState } from "react";
-import {sendEmail} from "../../services/emailServices";
 
 export default function ContactForm() {
     const [nombre, setNombre] = useState("");
@@ -14,19 +13,6 @@ export default function ContactForm() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-
-        const result = await sendEmail(nombre, empresa, email, telefono, mensaje);
-
-        if (result === 'success') {
-            alert('Email enviado con éxito');
-            setNombre('');
-            setEmpresa('');
-            setEmail('');
-            setTelefono('');
-            setMensaje('');
-        } else {
-            alert('Error al enviar el correo electrónico');
-        }
     };
 
     return (
