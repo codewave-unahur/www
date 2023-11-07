@@ -19,8 +19,8 @@ export default function Home() {
         <ContactForm/>
             <h1>Feed de Instagram</h1>
             <InstagramEmbed
-                url='https://www.instagram.com/p/B6tQ0Z4g8fP/'
-                maxWidth={320}
+                url='https://www.instagram.com/codewavear/'
+                maxWidth={100}
                 hideCaption={false}
                 containerTagName='div'
             />
