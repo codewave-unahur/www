@@ -6,6 +6,7 @@ import ContactForm from "./Home/ContactForm"
 import SliderCarousel from "./Home/SliderCarousel";
 import Servicios from "./Home/Servicios"
 import Portfolio from "./Home/Portfolio"
+import Feed from "./Feed";
 
 
 export default function Home() {
@@ -17,7 +18,8 @@ export default function Home() {
         <Servicios/>
         <Portfolio/>
         <ContactForm/>
-        <Footer/> 
+        <Footer/>
+            <Feed token='1254666' limit={5}/>
       </Box>
     </>
   )
