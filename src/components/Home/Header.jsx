@@ -22,8 +22,6 @@ function Header() {
     setAnchorElNav(null);
   };
 
-  
-
   return (
     <AppBar position="static" color="primary">
       <Container maxWidth="xl">
@@ -67,6 +65,9 @@ function Header() {
               <a href="/#contacto">
                 <Button variant="text" color="white"> Contacto </Button>
               </a>
+              <a href="/turnos">
+                <Button variant="text" color="white"> Turnos </Button>
+              </a>
             </Box>
           </Box>
 
@@ -104,7 +105,11 @@ function Header() {
                 <MenuItem onClick={handleCloseNavMenu}>
                   <a style={{textDecoration:"none", color:"black"}} href="/#contacto"> Contacto </a>
                 </MenuItem>
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <a style={{textDecoration:"none", color:"black"}} href="/turnos"> Turnos </a>
+                </MenuItem>
               </Menu>
+
           </Box>
          
           <Box //LOGO PANTALLA CHICA

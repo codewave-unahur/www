@@ -7,7 +7,6 @@ import Footer from "./Home/Footer";
 export default function Nosotros() {
   return(
     <>
-      <Header/>
       <Box id="nosotros"  bgcolor="primary.dark" sx={{display:"flex", justifyContent: "center", flexDirection:"column", padding: "2rem"}}>
         <Box sx={{padding:"2rem"}}>
           <Typography variant="h4" align="center" color="white.main">
@@ -25,7 +24,6 @@ export default function Nosotros() {
           </Typography>
         </Box>
       </Box>
-      <Footer/>
       </>
   )
 }
