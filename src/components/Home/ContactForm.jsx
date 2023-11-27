@@ -5,6 +5,7 @@ import { Button } from "@mui/material";
 import { useState } from "react";
 import Swal from "sweetalert2";
 import axios from "axios";
+import {mostrarAlerta} from "../../utils/alerta";
 
 export default function ContactForm() {
   const [nombre, setNombre] = useState("");
@@ -39,6 +40,7 @@ export default function ContactForm() {
           title: "Error",
           text: "Ocurrió un error al enviar el mensaje",
         });
+        mostrarAlerta('¡Error!', 'Ocurrió un error al enviar el mensaje', 'error');
       }
     })
     .catch((error) => {

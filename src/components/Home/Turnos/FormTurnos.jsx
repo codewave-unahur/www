@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Box, Button, Grid } from "@mui/material";
 import FormField from "./FormFiels";
 import Swal from 'sweetalert2';
+import {mostrarAlerta} from "../../../utils/alerta";
 
 const FormTurnos = () => {
 
@@ -29,11 +30,7 @@ const FormTurnos = () => {
     // Validación de los datos
     for (let field of fields) {
       if (!field.validation(formValues[field.name])) {
-        Swal.fire({
-          icon: 'error',
-          title: 'Oops...',
-          text: `Por favor, verifica el campo ${field.label}.`,
-        });
+        mostrarAlerta('¡Ooops!', 'Hago salio mal!!!', 'error');
         return;
       }
     }
@@ -42,11 +39,7 @@ const FormTurnos = () => {
     // ...
 
     // Retroalimentación al usuario
-    Swal.fire({
-      icon: 'success',
-      title: '¡Buen trabajo!',
-      text: 'Tus datos han sido enviados correctamente.',
-    });
+    mostrarAlerta('¡Buen trabajo!', 'Tus datos han sido enviados correctamente.', 'success');
   }
 
 
