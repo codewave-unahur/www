@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Box, Button, Grid } from "@mui/material";
 import FormField from "./FormFiels";
+import Swal from "sweetalert2";
 
 const FormTurnos = () => {
 
@@ -35,8 +36,7 @@ const FormTurnos = () => {
     // ...
 
     // Retroalimentación al usuario
-    alert('¡Formulario enviado con éxito!');
-  };
+  }
 
   return (
     <>
