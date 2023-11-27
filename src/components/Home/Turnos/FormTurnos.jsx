@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Box, Button, Grid } from "@mui/material";
 import FormField from "./FormFiels";
-import Swal from "sweetalert2";
+import Swal from 'sweetalert2';
 
 const FormTurnos = () => {
 
@@ -21,13 +21,19 @@ const FormTurnos = () => {
     { label: 'Fecha del turno', type: 'date', name: 'fechaTurno',validation: value => value.trim() !== '' },
     { label: 'Hora del turno', type: 'time', name: 'horaTurno',validation: value => value.trim() !== '' },
   ];
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
     // Validación de los datos
     for (let field of fields) {
       if (!field.validation(formValues[field.name])) {
-        alert(`Por favor, verifica el campo ${field.label}.`);
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: `Por favor, verifica el campo ${field.label}.`,
+        });
         return;
       }
     }
@@ -36,7 +42,13 @@ const FormTurnos = () => {
     // ...
 
     // Retroalimentación al usuario
+    Swal.fire({
+      icon: 'success',
+      title: '¡Buen trabajo!',
+      text: 'Tus datos han sido enviados correctamente.',
+    });
   }
+
 
   return (
     <>

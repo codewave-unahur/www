@@ -1,6 +1,5 @@
 import React from 'react'
 import { Box } from "@mui/material";
-import Footer from "./Home/Footer";
 import ContactForm from "./Home/ContactForm"
 import SliderCarousel from "./Home/SliderCarousel";
 import Servicios from "./Home/Servicios"
