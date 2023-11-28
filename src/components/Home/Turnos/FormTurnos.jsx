@@ -2,36 +2,23 @@ import React, { useState } from "react";
 import { Box, Button, Grid } from "@mui/material";
 import FormField from "./FormFiels";
 import {mostrarAlerta} from "../../../utils/alerta";
+import {fields} from "./formConfig";
+
 const FormTurnos = () => {
 
-  const [formValues, setFormValues ] = useState({
-    nombre: "",
-    empresa: "",
-    email: "",
-    telefono: "",
-    fechaTurno: "",
-    horaTurno: ""
-    })
+  const formInicial = fields.reduce((valores, campo) => {
+    valores[campo.nombre] = '';
+    return valores;
+  }, {});
 
-  const validateNotEmpty = value => value.trim() !== '';
-  const validateEmail = value => value.includes('@');
-  const validateNumeric = value => !isNaN(value);
-
-  const fields = [
-    { label: 'Nombre', type: 'text', name: 'nombre' ,validation: validateNotEmpty},
-    { label: 'Empresa', type: 'text', name: 'empresa', validation: validateNotEmpty},
-    { label: 'Email', type: 'email', name: 'email',validation: validateEmail },
-    { label: 'Teléfono', type: 'text', name: 'telefono',validation: validateNumeric },
-    { label: 'Fecha del turno', type: 'date', name: 'fechaTurno',validation: validateNumeric },
-    { label: 'Hora del turno', type: 'time', name: 'horaTurno',validation: validateNotEmpty },
-  ];
+  const [formValues, setFormValues ] = useState(formInicial);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     // Validación de los datos
     for (let field of fields) {
-      if (!field.validation(formValues[field.name])) {
+      if (!field.validation(formValues[field.name])) { // Aquí está la corrección
         mostrarAlerta('¡Ooops!', 'Hago salio mal!!!', 'error');
         return;
       }
