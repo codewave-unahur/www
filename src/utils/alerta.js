@@ -7,8 +7,12 @@ export function mostrarAlerta(titulo, texto, tipo) {
     title: titulo,
     text: texto,
     background: theme.palette.primary.contrastText,
-    timer: 3000
+    timer: 3000,
+    customClass: {
+      container: 'my-swal',
 
-    // Aquí puedes agregar más opciones de personalización
+
+    },
+
   });
 }

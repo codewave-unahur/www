@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { Box, Button, Grid } from "@mui/material";
 import FormField from "./FormFiels";
-import Swal from 'sweetalert2';
 import {mostrarAlerta} from "../../../utils/alerta";
-
 const FormTurnos = () => {
 
   const [formValues, setFormValues ] = useState({
@@ -14,15 +12,19 @@ const FormTurnos = () => {
     fechaTurno: "",
     horaTurno: ""
     })
-  const fields = [
-    { label: 'Nombre', type: 'text', name: 'nombre' ,validation: value => value.trim() !== ''},
-    { label: 'Empresa', type: 'text', name: 'empresa', validation: value => value.trim() !== ''},
-    { label: 'Email', type: 'email', name: 'email',validation: value => value.includes('@') },
-    { label: 'Teléfono', type: 'text', name: 'telefono',validation: value => !isNaN(value) },
-    { label: 'Fecha del turno', type: 'date', name: 'fechaTurno',validation: value => value.trim() !== '' },
-    { label: 'Hora del turno', type: 'time', name: 'horaTurno',validation: value => value.trim() !== '' },
-  ];
 
+  const validateNotEmpty = value => value.trim() !== '';
+  const validateEmail = value => value.includes('@');
+  const validateNumeric = value => !isNaN(value);
+
+  const fields = [
+    { label: 'Nombre', type: 'text', name: 'nombre' ,validation: validateNotEmpty},
+    { label: 'Empresa', type: 'text', name: 'empresa', validation: validateNotEmpty},
+    { label: 'Email', type: 'email', name: 'email',validation: validateEmail },
+    { label: 'Teléfono', type: 'text', name: 'telefono',validation: validateNumeric },
+    { label: 'Fecha del turno', type: 'date', name: 'fechaTurno',validation: validateNumeric },
+    { label: 'Hora del turno', type: 'time', name: 'horaTurno',validation: validateNotEmpty },
+  ];
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -34,14 +36,9 @@ const FormTurnos = () => {
         return;
       }
     }
-
-    // Aquí puedes enviar los datos al servidor
-    // ...
-
     // Retroalimentación al usuario
     mostrarAlerta('¡Buen trabajo!', 'Tus datos han sido enviados correctamente.', 'success');
   }
-
 
   return (
     <>

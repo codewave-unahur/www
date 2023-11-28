@@ -36,3 +36,6 @@
     transform: rotate(360deg);
   }
 }
+.my-swal {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Agrega una sombra al contenedor de la alerta */
+}
