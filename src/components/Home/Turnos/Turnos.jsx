@@ -27,6 +27,5 @@ const Turnos = () => {
 
     </Grid>
   )
-
 }
 export default Turnos

@@ -7,7 +7,7 @@ import {fields} from "./formConfig";
 const FormTurnos = () => {
 
   const formInicial = fields.reduce((valores, campo) => {
-    valores[campo.nombre] = '';
+    valores[campo.name] = '';
     return valores;
   }, {});
 
@@ -25,6 +25,9 @@ const FormTurnos = () => {
     }
     // Retroalimentación al usuario
     mostrarAlerta('¡Buen trabajo!', 'Tus datos han sido enviados correctamente.', 'success');
+
+    // Limpiar el formulario
+    setFormValues(formInicial);
   }
 
   return (

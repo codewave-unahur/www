@@ -49,8 +49,6 @@ export default function ContactForm() {
    
   }
 
- 
-
   return (
     <>
     <Box id="contacto" bgcolor="primary.dark">
