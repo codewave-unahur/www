@@ -122,7 +122,6 @@ function Header() {
             }}
           />
           </Box>
-  
       </Container>
     </AppBar>
   );

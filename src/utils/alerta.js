@@ -10,8 +10,6 @@ export function mostrarAlerta(titulo, texto, tipo) {
     timer: 3000,
     customClass: {
       container: 'my-swal',
-
-
     },
 
   });
