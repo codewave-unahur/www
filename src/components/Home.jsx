@@ -7,8 +7,6 @@ import SliderCarousel from "./Home/SliderCarousel";
 import Servicios from "./Home/Servicios"
 import Productos from "./Home/Productos"
 import CasosExitos, {productos} from "./Home/CasosExitos";
-
-
 export default function Home() {
   return (
     <>
