@@ -3,7 +3,6 @@ import { Box, Typography } from "@mui/material";
 import Header from "./Home/Header";
 import Footer from "./Home/Footer";
 
-
 export default function Nosotros() {
   return(
     <>
