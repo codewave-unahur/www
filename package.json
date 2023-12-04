@@ -2,7 +2,7 @@
   "name": "www",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/codewave-unahur/www/tree/deploy",
+  "homepage": "https://github.com/codewave-unahur/www",
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",

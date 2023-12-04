@@ -1,20 +1,22 @@
-name: Deploy to GitHub Pages
+name: Deploy Codewave
+
 on:
   push:
     branches:
       - deploy
 jobs:
-  build-and-deploy:
+  deploy:
+    name: deploy App
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: ["18.x"]
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      - name: Install dependencies
-        run: npm install
-      - name: Build
-        run: npm run build
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.0
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v1
         with:
-          branch: gh-pages
-          folder: build
+          node-version: ${{matrix.node-version}}
+      - name: Install package
+        run: npm install
+
+
