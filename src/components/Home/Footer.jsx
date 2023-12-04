@@ -47,7 +47,7 @@ const Footer = () => {
 
 
             </Box>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.3954165403943!2d-58.637957424984805!3d-34.619446572948675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb8d01117469b%3A0xdf57a2125cf418d7!2sAusebione%208%2C%20B1688%20Villa%20Tesei%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1698851122717!5m2!1ses!2sar"
+            <iframe title='google-map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.3954165403943!2d-58.637957424984805!3d-34.619446572948675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb8d01117469b%3A0xdf57a2125cf418d7!2sAusebione%208%2C%20B1688%20Villa%20Tesei%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1698851122717!5m2!1ses!2sar"
                     width="350" height="250" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
 
             <Box sx={{margin:"2rem", display:"flex", flexDirection:"column"}}>

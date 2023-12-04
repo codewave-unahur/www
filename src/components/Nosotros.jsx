@@ -3,7 +3,6 @@ import { Box, Typography } from "@mui/material";
 import Header from "./Home/Header";
 import Footer from "./Home/Footer";
 
-
 export default function Nosotros() {
   return(
     <>
@@ -11,7 +10,7 @@ export default function Nosotros() {
       <Box id="nosotros"  bgcolor="primary.dark" sx={{display:"flex", justifyContent: "center", flexDirection:"column", padding: "2rem"}}>
         <Box sx={{padding:"2rem"}}>
           <Typography variant="h4" align="center" color="white.main">
-            NOSOTROS
+            NOSOTROS Codewave
           </Typography>
         </Box>
         <Box sx={{padding:"2rem"}} >
